@@ -7,6 +7,8 @@
 let arr = [1, 2],
     string = "",
     timer,
+    startTimer,
+    
     askNumber = () => {
         string = +prompt("Введи целое число от 2 до 99", "");
         if (string == "" || isNaN(string) || string == 0 || string % 1 != 0 || string < 2 || string > 99) {
@@ -29,7 +31,7 @@ let arr = [1, 2],
 
     showArr = () => {
         document.getElementById("fibaText").innerHTML = arr.join("  ");
-        let startTimer = setTimeout(() => start(), 500);
+        startTimer = setTimeout(() => start(), 500);
     },
 
     start = () => {
