@@ -1,16 +1,12 @@
 "use strict";
 
-// Числа Фибаначчи в зависимости от ввтода входящего числа
-//Input: 5
-//Out: "1 2 3 5 8"
-
 let arr = [1, 2],
     string = "",
     timer,
     startTimer,
-    
+
     askNumber = () => {
-        string = +prompt("Введи целое число от 2 до 99", "");
+        string = +prompt("Enter an integer from 2 to 99", "");
         if (string == "" || isNaN(string) || string == 0 || string % 1 != 0 || string < 2 || string > 99) {
             askNumber();
         }
@@ -35,7 +31,7 @@ let arr = [1, 2],
     },
 
     start = () => {
-        let askAgain = confirm("Начать с начала?");
+        let askAgain = confirm("Start from the beginning?");
         if (askAgain) {
             arr = [1, 2];
             fiba();
